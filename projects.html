@@ -1,15 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Generic - Haseebullah</title>
+		<title>Projects - Haseebullah</title>
 		
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
-		<style>
+		<link rel="stylesheet" href="assets/css/timeline.css"/>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <style>
+      body {
+        user-select: none;
+      }
+
       #footer section {
         display: flex;
         flex-direction: column;
@@ -37,8 +42,8 @@
 				
 				<ul class="links">
 					<li><a href="index.html#header">Haseebullah</a></li>
-					<li><a href="projects.html">My Projects</a></li>
-					<li class="active"><a href="generic.html">Generic</a></li>
+					<li class="active"><a href="projects.html">My Projects</a></li>
+					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
 				</ul>
 				
@@ -49,45 +54,82 @@
 					<li><a href="https://www.discordapp.com/users/826002117604409355" target="_blank" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
 					
 					<li><a href="/assets/documents/HaseebullahResume.pdf" target="_blank" class="icon fa-address-card"><span class="label">Haseebullah's Resume</span></a></li>
-					
-					<!-- My Other Profile Links -->
-					<!--
-					<li><a href="https://www.medium.com/@haseebullah.amanat" target="_blank" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-					<li><a href="https://www.pinterest.com/haseebullah9012/" target="_blank" class="icon brands fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-					<li><a href="https://www.quora.com/profile/Haseebullah-Amanat/" target="_blank" class="icon brands fa-quora"><span class="label">Quora</span></a></li>
-					<li><a href="https://www.reddit.com/user/Haseebullah_9012/" target="_blank" class="icon brands fa-reddit-alien"><span class="label">Reddit</span></a></li>
-					
-					<li><a href="https://www.twitter.com/Haseebullah9012" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="https://www.instagram.com/haseebullah_9012/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					
-					<li><a href="https://www.hackerrank.com/profile/Haseebullah9012" target="_blank" class="icon brands fa-hackerrank"><span class="label">HackerRank</span></a></li>
-					<li><a href="https://www.kaggle.com/haseebullah9012" target="_blank" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
-					<li><a href="https://www.leetcode.com/u/user5558ff/" target="_blank" class="icon brands fa-dev"><span class="label">Leetcode</span></a></li>
-					-->
 						
 				</ul>
 
 			</nav>
 
 			<div id="main">
+        
+        <section>
 
-				<section class="post">
-					
-					<header class="major">
-						<span class="date">April 25, 2017</span>
-						<h1>This is a<br />
-						Generic Page</h1>
-						<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-						facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-						amet nullam sed etiam veroeros.</p>
-					</header>
-					
-					<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+          <div id="projectsFilter">
+            
+            <div class="header">
+              <h2>Project Category Filters</h2>
+              <p>Choose the Categories and Subcategories to Display the Projects accordingly.</p>
+            </div>
 
-				</section>
+            <ul class="tabs categories">
+              <li><span data-id="game-development">Game Development</span></li>
+              <li><span data-id="graphics">Graphics</span></li>
+              <li><span data-id="data-science">Data Science</span></li>
+              <li><span data-id="web-development">Web Development</span></li>
+              <li><span data-id="core-programming">Core Programming</span></li>
+            </ul>
+            
+            <div class="tabsPanel">
 
+              <section data-id="game-development">
+                <ul class="tags subcategories">
+                  <li><span data-id="unity">Unity</span></li>
+                  <li><span data-id="terminal-games">Terminal Games</span></li>
+                  <li><span data-id="web-games">Web Games</span></li>
+                </ul>
+              </section>
+
+              <section data-id="graphics">
+                <ul class="tags subcategories">
+                  <li><span data-id="photoshop">Adobe Photoshop</span></li>
+                  <li><span data-id="blender">Blender</span></li>
+                  <li><span data-id="video-editing">Video Editing</span></li>
+                </ul>
+              </section>
+
+              <section data-id="data-science">
+                <ul class="tags subcategories">
+                  <li><span data-id="python-ds">Python (DataScience)</span></li>
+                  <li><span data-id="machine-learning">Machine Learning</span></li>
+                  <li><span data-id="data-analysis">Data Analysis</span></li>
+                </ul>
+              </section>
+              
+              <section data-id="web-development">
+                <ul class="tags subcategories">
+                  <li><span data-id="html-css-js">HTML/CSS/JS</span></li>
+                  <li><span data-id="mern">MERN-Stack</span></li>
+                </ul>
+              </section>
+              
+              <section data-id="core-programming">
+                <ul class="tags subcategories">
+                  <li><span data-id="c++">C++</span></li>
+                  <li><span data-id="python">Python</span></li>
+                  <li><span data-id="javascript">JavaScript</span></li>
+                </ul>
+              </section>
+              
+            </div>
+
+          </div>
+
+          <div id="timeline"></div>
+          
+          <div id="projectDetailsModal"></div>
+          <div class="overlay"></div>
+
+        </section>
+        
 			</div>
 
 			<footer id="footer">
@@ -133,6 +175,8 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+    <script src="assets/js/projectsTimeline.js"></script>
 
 	</body>
 </html>

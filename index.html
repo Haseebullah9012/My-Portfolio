@@ -7,6 +7,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/SlickCarousel/slick.css" />
+		<link rel="stylesheet" href="assets/css/SlickCarousel/slick-theme.css" />
+		
+		<link rel="stylesheet" href="/assets/myStylesScripts/aboutMe.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
@@ -66,8 +70,6 @@
 				<ul class="links">
 					<li class="active"><a href="index.html#header">Haseebullah</a></li>
 					<li><a href="projects.html">My Projects</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
 				</ul>
 				
 				<ul class="icons">
@@ -84,34 +86,80 @@
 
 			<div id="main">
 
-				<section class="posts">
+				<section class="aboutMe">
 					
-					<article>
-						<header>
-							<span class="date">April 24, 2017</span>
-							<h2><a href="#">Sed magna<br />
-							ipsum faucibus</a></h2>
-						</header>
-						<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-						<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button">Full Story</a></li>
-						</ul>
-					</article>
+					<div id="brief-introduction">
+						<div>
+							<div class="image">
+								<img src="/assets/images/MyProfileImage.jpg" alt="Haseebullah's Profile Image">
+							</div>
+							<div class="paragraph">
+								<p>
+									I'm a passionate Data Scientist, with a keen interest in Problem-solving, Machine Learning, AI, and have a strong foundation in Programming-Logic and Algorithms. 
+									I thrive on eliminating Inefficiencies, and bringing near-to Perfect Unique Results, to drive Positive Impact. 
+									My journey through the world of Technology has been driven by a desire to create innovative solutions that make an everlasting Change.
+								</p>
+								<p>
+									I believe in Life-long Learning and Continuos Improvement, actively exploring different Perspectives, to be able to trasnform Knowledge into Wisdom. 
+								</p>
+							</div>
+						</div>
+						
+					</div>
 					
-					<article>
-						<header>
-							<span class="date">April 22, 2017</span>
-							<h2><a href="#">Primis eget<br />
-							imperdiet lorem</a></h2>
-						</header>
-						<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-						<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button">Full Story</a></li>
-						</ul>
-					</article>
+					<div id="myQuote">
+						<blockquote>
+							To Believe <br>
+							you have the Right <br>
+							to be an Author of Change.
+							<span class="name">Haseebullah</span>
+						</blockquote>
+					</div>
+
+					<hr>
 					
+					<div id="testimonials">
+						<h2>Testimonials</h2>
+						
+						<div class="container">
+							<div class="card" data-name="zia-ul-rehman">
+								<div class="image"><img src="/assets/images/Zia-ul-Rehman.jpg" alt="Zia-ul-Rehman Profile Image"></div>
+								<blockquote>As my student, he demonstrated a strong aptitude for individual work, mastering concepts swiftly. I recommend him for his quick learning abilities and intelligence. However, he faced challenges in team collaboration. His adaptability might be hindered by his frequent shifts in interests and job mobility, which could impact long-term commitments. Nevertheless, his technical skills make him an asset for roles that require independent problem-solving and a rapid grasp of new technologies</blockquote>
+								
+								<div class="footer">
+									<span class="name">Zia-ul-Rehman</span>
+									<span class="profession">Ph.D. Software Engineer, Entrepreneur</span>
+									<span class="myRelation">My University Professor</span>
+								</div>
+							</div>
+							
+							<div class="card" data-name="khurram-ehsan">
+								<div class="image"><img src="/assets/images/KhurramEhsan.jpg" alt="Khurram Ehsan Profile Image"></div>
+								<blockquote>I highly recommend Haseebullah for his analytical and problem solving skills. With his quick learning habits, he consistently delivers remarkable results. He is equally good in individual and team tasks.</blockquote>
+								
+								<div class="footer">
+									<span class="name">M. Khurram Ehsan</span>
+									<span class="profession">Ph.D. Engineering, Associate Professor</span>
+									<span class="myRelation">My University Professor</span>
+								</div>
+							</div>
+							
+							<div class="card" data-name="asghar-ali-shah">
+								<div class="image"><img src="/assets/images/AsgharAliShah.jpg" alt="Asghar Ali Profile Image"></div>
+								<blockquote>I highly recommend Haseebullah to any organization or team in need of a dedicated and skilled professional. His expertise and commitment are sure to make a positive impact, and I have no doubt that He will continue to excel in his future endeavors.</blockquote>
+								
+								<div class="footer">
+									<span class="name">Asghar Ali Shah</span>
+									<span class="profession">Ph.D. Computer Science, Assistant Professor</span>
+									<span class="myRelation">My University Professor</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<hr>
+
 				</section>
 
 			</div>
@@ -160,7 +208,8 @@
 		<script src="assets/js/util.js"></script>
 		
 		<script src="assets/js/typed.js/typed.umd.js"></script>
-		
+		<script src="assets/js/SlickCarousel/slick.min.js"></script>
+
 		<script src="assets/js/main.js"></script>
 		
 		<script>
@@ -174,5 +223,22 @@
 			});
 		</script>
 		
+		<script>
+			//Testimonials Carousel using Slick Library
+			let slidesCount = 1;
+			if($("body").width() > 1000)
+				slidesCount = 3;
+			else if($("body").width() > 800)
+				slidesCount = 2;
+			
+			$('#testimonials .container').slick({
+				slidesToShow: slidesCount,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1500,
+			});
+			
+		</script>
+
 	</body>
 </html>

@@ -88,6 +88,218 @@
  
 }
 
+#myPersonality {
+  
+  h2 {
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .MBTI.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .intro {
+      display: flex;
+      width: 40%;
+      min-height: 230px;
+      justify-content: end;
+      
+      div {
+        display: none; //By Default
+        text-align: center;
+        background-color: #dedede;
+        border-radius: 15px;
+        padding: 18px;
+        width: 80%;
+        
+        h4 {
+          font-size: 15px;
+          margin: 0;
+          letter-spacing: 3px;
+        }
+        h3 {
+          font-size: 18px;
+          margin: 0;
+          margin-bottom: 10px;
+          letter-spacing: 3px;
+        }
+        p {
+          font-size: 15px;
+          text-align: left;
+          margin: 0;
+          line-height: 1.8;
+        }
+      }
+      div[data-id='0'] {
+        display: block;
+        width: 100%;
+      }
+
+      div[data-id='1'] {
+        h4 { color: darken(#4298b4, 10); }
+      }
+      div[data-id='2'] {
+        h4 { color: darken(#e4ae3a, 10); }
+      }
+      div[data-id='3'] {
+        h4 { color: darken(#33a474, 10); }
+      }
+      div[data-id='4'] {
+        h4 { color: darken(#88619a, 10); }
+      }
+    }
+
+    .chart {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      .trait {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 10px;
+        margin: 2px 0;
+        width: 100%;
+        border-radius: 12px;
+        
+        &:hover {
+          background-color: #ccc;
+          cursor: pointer;
+        }
+
+        .label {
+          width: 20%;
+          font-size: 14px;
+          font-family: Helvetica;
+          &.left {
+            text-align: right;
+          }
+        }
+
+        .bar {
+          width: 60%;
+          height: 13px;
+          background-color: #ccc;
+          position: relative;
+          margin: 0 10px;
+          border-radius: 20px;
+
+          .dot {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            background-color: #444;
+            border-radius: 50%;
+            border: 3px solid #eee;
+          }
+
+          .midline {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 18px;
+            background-color: #888;
+          }
+        }
+      }
+
+      .trait[data-id='1'] {
+        .bar,.dot { background-color: #4298b4; }
+        &:hover{ .label.left { font-weight: bold; } }
+      }
+      .trait[data-id='2'] {
+        .bar,.dot { background-color: #e4ae3a; }
+        &:hover{ .label.right { font-weight: bold; } }
+      }
+      .trait[data-id='3'] {
+        .bar,.dot { background-color: #33a474; }
+        &:hover{ .label.left { font-weight: bold; } }
+      }
+      .trait[data-id='4'] {
+        .bar,.dot { background-color: #88619a; }
+        &:hover{ .label.left { font-weight: bold; } }
+      }
+    }
+  }
+
+  .OCEAN.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .chart {
+      display: flex;
+      width: 50%;
+      justify-content: end;
+    }
+
+    .intro {
+      display: flex;
+      width: 30%;
+      
+      div {
+        display: none; //By Default
+        text-align: center;
+        background-color: #dedede;
+        border-radius: 15px;
+        padding: 25px;
+        height: 60%;
+        margin-top: 20px;
+        
+        h3 {
+          font-size: 18px;
+          margin: 0;
+          margin-bottom: 15px;
+          letter-spacing: 3px;
+
+          span {
+            font-size: 15px;
+            display: block;
+          }
+        }
+        p {
+          font-size: 15px;
+          text-align: left;
+          margin: 0;
+          line-height: 1.8;
+        }
+      }
+      div[data-id='0'] {
+        display: block;
+        height: 80%;
+      }
+
+      div[data-id='1'] {
+        h3 { color: darken(rgb(218, 169, 216), 30) }
+      }
+      div[data-id='2'] {
+        h3 { color: darken(rgb(191, 230, 248), 30) }
+      }
+      div[data-id='3'] {
+        h3 { color: darken(rgb(145, 225, 126), 30) }
+      }
+      div[data-id='4'] {
+        h3 { color: darken(rgb(246, 179, 75), 30) }
+      }
+      div[data-id='5'] {
+        h3 { color: darken(rgb(245, 109, 109), 30) }
+      }
+
+    }
+  }
+
+  .container {
+    margin-bottom: 40px;
+  }
+}
+
 #testimonials {
   h2 {
     text-transform: capitalize;
@@ -158,6 +370,24 @@
   }
 }
 
+@media screen and (max-width: 1280px) { 
+  
+  //Make Bigger OCEAN-Intro
+  #myPersonality {
+    .OCEAN.container {
+      .intro {
+        width: 35%;
+        div {
+          height: 68%;
+        }
+        div[data-id='0'] {
+          height: 92%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) { 
   
   //Make Image Bigger
@@ -173,6 +403,28 @@
 
       .paragraph {
         flex: 7;
+      }
+    }
+  }
+
+  //Make Charts Bigger
+  #myPersonality {
+    .MBTI.container {
+      .intro {
+        width: 45%;
+        min-height: 250px;
+      }
+      .chart {
+        width: 53%;
+      }
+    }
+
+    .OCEAN.container {
+      .chart {
+        width: 58%;
+      }
+      .intro {
+        width: 38%;
       }
     }
   }
@@ -194,6 +446,42 @@
       }
     }
   }
+
+  //Make containers Column-wise
+  #myPersonality {
+    .MBTI.container {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .chart {
+        width: 80%;
+      }
+      .intro {
+        width: 70%;
+        min-height: 220px;
+        margin: 20px 0;
+        justify-content: center;
+      }
+    }
+    .OCEAN.container {
+      flex-direction: column;
+      align-items: center;
+
+      .chart {
+        width: 70%;
+      }
+      .intro {
+        width: 70%;
+        justify-content: center;
+        div {
+          width: 70%;
+        }
+        div[data-id='0'] {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 740px) { 
@@ -208,5 +496,60 @@
       }
     }
   }
+
+  //Make MBTI Chart bigger
+  #myPersonality {
+    .MBTI.container {
+      .intro {
+        width: 75%;
+        margin: 10px 0;
+      }
+      .chart {
+        width: 90%;
+      }
+    }
+
+    .OCEAN.container {
+      .chart {
+        width: 85%;
+      }
+      .intro {
+        width: 80%;
+
+        div {
+          width: 80%;
+        }
+      }
+    }
+  }
 }
 
+@media screen and (max-width: 600px) { 
+  
+  //Make MBTI Chart bigger
+  #myPersonality {
+    .MBTI.container {
+      .intro {
+        width: 90%;
+        div {
+          width: 90%;
+        }
+      }
+      .chart {
+        width: 100%;
+      }
+    }
+
+    .OCEAN.container {
+      .chart {
+        width: 100%;
+      }
+      .intro {
+        width: 98%;
+        div {
+          width: 85%
+        }
+      }
+    }
+  }
+}

@@ -184,8 +184,8 @@ $timeline-color: #ee4d4d;
 				width: 90%;
 				float: right;
 				
-                &:before,
-                &.right:before {
+				&:before,
+				&.right:before {
 					left: -5px;
 					right: inherit;
 				}
@@ -232,7 +232,6 @@ $timeline-color: #ee4d4d;
 			margin: 8px 0px;
 			
 			span {
-				//background-color: #ee4d4d;
 				padding: 10px 25px;
 				border-radius: 20px;
 				border: 3px dashed #777;

@@ -362,7 +362,7 @@ myProjects.sort((a, b) => {
     let iconHeight = 20;
     for(let category of project.categories) {
       const $iconImg = $('<img>').attr({
-        src: '/assets/images/icons/'+ category + '.png',
+        src: 'assets/images/icons/'+ category + '.png',
         width: '25px',
         alt: ''
       });

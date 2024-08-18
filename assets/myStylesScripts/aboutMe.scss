@@ -64,7 +64,7 @@
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     padding: 20px;
-    padding-left: 50px;    
+    padding-left: 50px;
     
     &::before {
       position: absolute;
@@ -503,6 +503,11 @@
       .intro {
         width: 75%;
         margin: 10px 0;
+        div {
+          p {
+            font-size: 14px;
+          }
+        }
       }
       .chart {
         width: 90%;
@@ -518,6 +523,9 @@
 
         div {
           width: 80%;
+          p {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -526,6 +534,11 @@
 
 @media screen and (max-width: 600px) { 
   
+  #myQuote {
+    blockquote {
+      word-spacing: 4px;
+    }
+  }
   //Make MBTI Chart bigger
   #myPersonality {
     .MBTI.container {
@@ -537,6 +550,13 @@
       }
       .chart {
         width: 100%;
+
+        .trait {
+          .label {
+            width: 22%;
+            font-size: 13px;
+          }
+        }
       }
     }
 

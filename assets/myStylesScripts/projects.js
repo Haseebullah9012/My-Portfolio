@@ -137,7 +137,40 @@ const myProjects = [
     
     briefDescription: `  `,
   },
+  {
+    id: 209,
+    title: "AI Inventory Management WebApp",
+    categories: ["web-development", "data-science"],
+    subcategories: ["nextjs", "gen-APIs"],
+    date: '08/2024',
+    sourceCode: "https://github.com/Haseebullah9012/AI-InventoryManagement",
+    liveDemo: "https://ai-inventory-management.vercel.app/",
 
+    briefDescription: `The user can add Items into the Inventory by typing their name, or by capturing Image from Camera, or by Uploading Images or pasting URLs. The Images will be analyzed using Azure API, which will automatically detect the Objects.  `,
+  },
+  {
+    id: 210,
+    title: "AI Flashcards WebApp",
+    categories: ["web-development", "data-science"],
+    subcategories: ["nextjs", "gen-APIs"],
+    date: '09/2024',
+    sourceCode: "https://github.com/Haseebullah9012/AI-Flashcards",
+    liveDemo: "https://ai-flashcards-gamma.vercel.app/",
+
+    briefDescription: `Flashcards are proven Benefecial for many Students for Learning Purposes. This Project uses Gemini API to genrate Flashcards automatically on any Topic or Subject, with varying Difficulty. \n\t The User Management and Storage is implemented as well using Clerk and Firebase. `,
+  },
+  {
+    id: 211,
+    title: "AI ChatBot WebApp",
+    categories: ["web-development", "data-science"],
+    subcategories: ["nextjs", "gen-APIs"],
+    date: '09/2024',
+    sourceCode: "https://github.com/Haseebullah9012/AI-Chatbot",
+    liveDemo: "https://ai-chatbot-haseebullah.vercel.app/",
+
+    briefDescription: `The user can chat with the general-purpose chatbot, using Gemini API. We can easily make it work on specific Use cases as well. \n\t The Responses are streamed, and they get rendered word by word, with a type-writer Effect. It looks Cool. `,
+  },
+  
   //Data Science
   {
     id: 301,
@@ -153,7 +186,7 @@ const myProjects = [
     title: "Personality Prediction",
     categories: ["data-science"],
     subcategories: ["machine-learning", "python-ds"],
-    date: '11/2024',
+    date: '-',
     
     briefDescription: `  `,
   },
